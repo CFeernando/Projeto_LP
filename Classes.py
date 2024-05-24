@@ -8,4 +8,8 @@ class Cliente:
     def inserir():
         print("Cliente cadastrado!")
 
+    def comer( a = True):
+        if a == True:
+            print('Cliente está comendo!')
+        return
     
