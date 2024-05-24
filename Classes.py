@@ -5,6 +5,7 @@ class Cliente:
         self.cpf = cpf
         self.contato = contato
 
-    
+    def inserir():
+        print("Cliente cadastrado!")
 
     
