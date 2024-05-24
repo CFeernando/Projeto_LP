@@ -5,11 +5,8 @@ class Cliente:
         self.cpf = cpf
         self.contato = contato
 
-    def inserir():
-        print("Cliente cadastrado!")
+    @classmethod
+    def inserir(cls, nome, cpf, contato):
+        pass
 
-    def comer( a = True):
-        if a == True:
-            print('Cliente está comendo!')
-        return
     
