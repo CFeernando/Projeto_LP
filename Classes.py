@@ -9,7 +9,7 @@ class Reserva:
     class Hotel:
         def __init__(self):
             self.nome = "Hotel Paradise"
-            self.cnpj = "77537261000"
+            self.cnpj = "77.537.261/0001-00"
             self.contato = "hotelparadise@gmail.com"
             self.lista_cadastro = []
 
@@ -27,8 +27,8 @@ class Reserva:
 novo = Reserva()
 
 # Fazer cadastro de cliente
-novo.fazer_cadastro_cliente("Samuel", 000, 111, 222)
+#novo.fazer_cadastro_cliente("Samuel", 000, 111, 222)
 
 # Imprimir os cadastros do hotel
 for cliente in novo.hotel.lista_cadastro:
-    print(cliente)  
+    print(cliente)
