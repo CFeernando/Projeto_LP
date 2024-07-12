@@ -8,4 +8,9 @@ class Cliente:
         self.contato = contato
         self.id = id
 
-    def __set__(self, instance, value):
+    def __set__(self, nome, cpf, contato, id):
+        self.nome = nome
+        self.cpf = cpf
+        self.contato = contato
+        self.id = id
+
