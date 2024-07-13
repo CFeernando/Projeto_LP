@@ -6,12 +6,11 @@ class Reserva:
         self.hotel = Hotel()
         self.cadastro_cliente = []  # Lista para armazenar clientes
 
-    @staticmethod
     def fazer_cadastro_cliente(self, nome, cpf, contato, id):
-        cliente = self.Cliente(nome, cpf, contato, id)
+        cliente = Cliente(nome, cpf, contato, id)
         self.cadastro_cliente.append(cliente)
         cadastro_hotel = {"CPF": cliente.cpf, "ID": cliente.id}
-        self.hotel.lista_cadastro.append(cadastro_hotel)
+        self.hotel.listaReserva().append(cadastro_hotel)
 
 # Criar instância de Reserva
 # novo = Reserva()
