@@ -7,13 +7,16 @@ class Hotel:
         self.contato = "hotelparadise@gmail.com"
 
     def listaReserva(self):
-        lista_Reserva = {}
-        adiciona_Reserva = Reserva()
-        for cliente in adiciona_Reserva.lista_Cliente():
-            cadastro_hotel = {'CPF': cliente.cpf, 'ID': cliente.id}.copy()
-            lista_Reserva['ID'] = cadastro_hotel
-            print('-' * 80)
-            print('LISTA DE RESERVAS')
-            print('-'*80)
-            for cadastro_hotel in lista_Reserva:
-                print('{0:<15} {1:<20}'.format(cadastro_hotel['CPF'], cadastro_hotel['ID']))
+        self.lista_Reserva = {}
+        self.adiciona_Reserva = Reserva
+        for cliente in self.adiciona_Reserva.lista_Cliente(self):
+            for i in self.adiciona_Reserva.acessar_valor_da_instancia(cliente):
+                print(i)
+'''            cadastro_hotel = {'ID': adiciona_Reserva., 'CPF': adiciona_Reserva.cliente.cpf}.copy()
+            self.lista_Reserva['ID'] = cadastro_hotel
+        print('-' * 80)
+        print('LISTA DE RESERVAS')
+        print('-'*80)
+        if len(self.lista_Reserva > 0):
+            for cadastro_hotel in self.lista_Reserva:
+                print('{0:<15} {1:<20}'.format(cadastro_hotel['CPF'], cadastro_hotel['ID']))'''

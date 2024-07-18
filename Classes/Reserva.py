@@ -11,3 +11,6 @@ class Reserva:
     def lista_Cliente(self):
         return self.cadastro_cliente
 
+    def acessar_valor_da_instancia(self):
+            return self.cadastro_cliente.cliente.cpf and self.cadastro_cliente.cliente.id
+

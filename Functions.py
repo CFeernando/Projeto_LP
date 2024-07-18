@@ -1,10 +1,11 @@
 from Classes.Hotel import *
+import random
 
 def cadastro():
     nome = str(input('Nome: '))
     cpf = str(input('CPF: '))
     contato = str(input('Contato: '))
-    id = str(input('ID: '))
+    id = str(*random.sample(range(1000, 5000), 1))
     global cliente
     cliente = Cliente(nome, cpf, contato,id)
     global add
