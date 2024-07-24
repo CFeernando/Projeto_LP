@@ -5,12 +5,9 @@ class Reserva:
         self.cadastro_cliente = []  # Lista para armazenar clientes
 
     def fazer_cadastro_cliente(self, cliente):
-        self.cliente = Cliente(nome=None, cpf=None, contato=None, id=None)
+        cliente = Cliente(nome='', cpf='', contato='', id='')
         self.cadastro_cliente.append(cliente)
 
     def lista_Cliente(self):
         return self.cadastro_cliente
-
-    def acessar_valor_da_instancia(self):
-            return self.cadastro_cliente.cliente.cpf and self.cadastro_cliente.cliente.id
 
