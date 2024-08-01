@@ -1,9 +1,11 @@
+import random
+
 class Cliente:
-    def __init__(self, nome, cpf, contato, id):
+    def __init__(self, nome, cpf, contato):
         self.nome = nome
         self.cpf = cpf
         self.contato = contato
-        self.id = id
+        self.id = str(*random.sample(range(1000, 5000), 1))
 
     #Getter
     @property
@@ -38,3 +40,14 @@ class Cliente:
     @id.setter
     def id(self, valor):
         self._id = valor
+
+
+    def zerarCliente(self):
+        self.nome = None
+        self.cpf = None
+        self.contato = None
+        self.id = None
+
+    def printarCliente(self):
+        return (f"Nome: {self.nome} \nCPF: {self.cpf}"
+                f"\nContato: {self.contato} \nID: {self.id}")

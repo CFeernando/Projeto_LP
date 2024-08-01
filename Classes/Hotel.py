@@ -9,13 +9,13 @@ class Hotel:
     @staticmethod
     def listaReserva():
         lista_Reserva = {}
-        adiciona_Reserva = Reserva()
-        for cliente in adiciona_Reserva.cadastro_cliente:
+        reserva = Reserva()
+        for cliente in reserva.reservaCliente:
             cadastro_hotel = {'CPF': cliente.cpf, 'ID': cliente.id}.copy()
             lista_Reserva[cliente.cpf] = cadastro_hotel
-        print('-' * 80)
+'''        print('-' * 80)
         print('LISTA DE RESERVAS')
         print('-' * 80)
         if len(lista_Reserva) > 0:
             for cadastro_hotel in lista_Reserva.values():
-                print('{0:<15} {1:<20}'.format(cadastro_hotel['CPF'], cadastro_hotel['ID']))
+                print('{0:<15} {1:<20}'.format(cadastro_hotel['CPF'], cadastro_hotel['ID']))'''
