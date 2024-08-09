@@ -6,12 +6,12 @@ class Cliente:
         self.cpf = cpf
         self.contato = contato
         self.id = str(*random.sample(range(1000, 5000), 1))
-    #Getter
+        
     @property
     def nome(self):
         return self._nome
     
-    #Setter
+
     @nome.setter
     def nome(self, valor):
         self._nome = valor
