@@ -1,4 +1,6 @@
-from domain.Reserva import *
+from src.domain.Cliente import Cliente
+from src.domain.Reserva import Reserva
+
 
 def menu():
     print('{0:^20}'.format('-' * 20))

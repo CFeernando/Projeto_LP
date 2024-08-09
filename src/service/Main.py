@@ -1,4 +1,4 @@
-from Functions import *
+from src.service.Functions import *
 
 while True:
     menu()

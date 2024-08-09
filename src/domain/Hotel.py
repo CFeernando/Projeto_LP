@@ -1,4 +1,3 @@
-from domain.Reserva import *
 
 class Hotel:
     def __init__(self):

@@ -1,5 +1,5 @@
-from domain.Cliente import *
-from domain.Hotel import *
+from src.domain.Hotel import Hotel
+
 
 class Reserva:
     _todas_reservas = []
