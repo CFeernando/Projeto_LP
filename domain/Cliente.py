@@ -1,6 +1,8 @@
 import random
 
 class Cliente:
+    lista_clientes = []
+
     def __init__(self, nome, cpf, contato):
         self.nome = nome
         self.cpf = cpf

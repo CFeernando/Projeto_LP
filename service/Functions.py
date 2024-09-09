@@ -1,5 +1,5 @@
-from src.domain.Cliente import Cliente
-from src.domain.Reserva import Reserva
+from domain.Cliente import Cliente
+from domain.Reserva import Reserva
 
 
 def menu():
@@ -10,9 +10,14 @@ def menu():
     print('[1] - Cadastar cliente \n[2] - Listagem \n[3] - Pesquisar \n[4] - Editar \n[5] - Excluir \n[6] - Sair')
 
 
-def cadastrarClientes(nome, cpf, contato):
-    
+def cadastrarClientes():
+    nome = str(input('Nome: '))
+    cpf = str(input('CPF: '))
+    contato = str(input('Contato: '))
     cliente = Cliente(nome, cpf, contato)
+
+    cliente.lista_clientes.append(cliente)
+
     newReserve = Reserva(cliente)
 
 
@@ -28,7 +33,7 @@ def listarReservas():
     else:
         print('Não há nada na base de dados.')
 
-def pesquisarCpfClientes(cpf):
+def buscarReservaPorCpf(cpf):
     reservas = Reserva.find_all_reservas()
     if len(reservas) > 0:
         for contador in reservas:
@@ -43,7 +48,7 @@ def pesquisarCpfClientes(cpf):
 
 def editarClienteReserva(valor_cpf):
 
-    clienteFound = pesquisarCpfClientes(valor_cpf) 
+    clienteFound = buscarReservaPorCpf(valor_cpf)
     if(clienteFound == 'Cliente nao encontrado !' or clienteFound == 'Não há nada na base de dados.'):
         return 'Cliente nao encontrado !'
     
@@ -68,21 +73,8 @@ def editarClienteReserva(valor_cpf):
                 else:
                     return 'Erro ao atualizar ...'
 
-# def deletarClientes():
-#     valorPesquisa = str(input('Digite o CPF: '))
-#     if len(reserva.cadastro_cliente) > 0:
-#         for cliente in reserva.cadastro_cliente:
-#             if cliente.cpf == valorPesquisa:
-#                 print('Nome: ', cliente.nome)
-#                 print('CPF: ', cliente.cpf)
-#                 print('Contato: ', cliente.contato)
-#                 print('ID: ', cliente.id)
-#                 reserva.cadastro_cliente.pop(cliente)
-#                 print(' ')
-#                 print('Cliente deletado!')
-#             else:
-#                 print('Cliente não encontrado.')
-#     else:
-#         print('Não há nada na base de dados.')
+def deletarReserva(cpf):
+    return Reserva.delete_reserva(cpf)
+
 
 
