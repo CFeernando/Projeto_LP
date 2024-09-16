@@ -1,5 +1,5 @@
-from domain.Cliente import Cliente
-from domain.Reserva import Reserva
+from Classes.domain.Cliente import Cliente
+from Classes.domain.Reserva import Reserva
 
 
 def menu():
@@ -17,8 +17,6 @@ def cadastrarClientes():
     cliente = Cliente(nome, cpf, contato)
 
     cliente.lista_clientes.append(cliente)
-
-    newReserve = Reserva(cliente)
 
 
 def listarReservas():
